@@ -1,15 +1,15 @@
 package me.bedtwL.addon.ffa;
 
-import me.bedtwL.ffa.api.PlayerArrowHitEffect;
+import me.bedtwL.ffa.api.PureArrowHitEffect;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class ArrowFlameHit implements PlayerArrowHitEffect {
+public class ArrowFlameHit extends PureArrowHitEffect {
     @Override
-    public void ArrowHitEffect(Location location, Player player) {
+    public void arrowHitEffect(Location location, Player player) {
         location.getWorld().playEffect(location, Effect.MOBSPAWNER_FLAMES, 0);
         location.getWorld().playEffect(location,Effect.EXPLOSION,0);
     }
