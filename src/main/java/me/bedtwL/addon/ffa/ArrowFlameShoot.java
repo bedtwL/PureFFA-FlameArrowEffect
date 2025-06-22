@@ -1,6 +1,5 @@
 package me.bedtwL.addon.ffa;
 
-import me.bedtwL.ffa.api.PlayerArrowShootEffect;
 import me.bedtwL.ffa.api.effect.PureArrowShootEffect;
 import org.bukkit.Location;
 import org.bukkit.Material;
