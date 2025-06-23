@@ -6,6 +6,8 @@ import java.util.UUID;
 
 public class FlameArrowMain implements EffectAddon {
     @Override
+    public Integer getAPIVer() {return 1;}
+    @Override
     public String getName() {
         return "FlameArrow";
     }
@@ -21,8 +23,8 @@ public class FlameArrowMain implements EffectAddon {
 
     @Override
     public void onEnable() {
-        new ArrowFlameShoot().registerArrowShootEffect();
-        new ArrowFlameHit().registerArrowHitEffect();
+        new ArrowFlameShoot().registerArrowShootEffect(this);
+        new ArrowFlameHit().registerArrowHitEffect(this);
     }
 
     @Override
